@@ -19,7 +19,7 @@
 
 ## データ入出力
 テキストを入力しボタンを押すとPタグに表示されるようにする。  
-```
+```javascript
 var bt = document.getElementById("bt");
 bt.addEventListener('click',function(){
     var word = [処理];//テキストボックスの値取得    
@@ -32,7 +32,7 @@ bt.addEventListener('click',function(){
 •入力された文字の末端が「ん」ではないことを確認する  
 word.slice(0,1);   
 word.slice(-1);
-```
+```javascript
 var bt = document.getElementById("bt");
 bt.addEventListener('click',function(){
 　var word = [処理]
@@ -50,7 +50,7 @@ function checkWord(word,startText){
 
 ## データ保存機能について
 localstrageの説明  
-```
+```javascript
 localStorage.setItem(key,value);
 
 localStorage.getItem(key);
@@ -59,7 +59,7 @@ localStorage.getItem(key);
 ## データ保存機能を作成する
 入力したものをlocalStorageに保存していく    
 *saveに保存してたものを取得し「,」＋「新単語」で保存し直す
-```
+```javascript
     function saveWord(word){
             var save = [処理]
             localStorage.setItem('game',save+","+word);
@@ -74,7 +74,7 @@ localStorage.getItem(key);
 
 ## データ読み出し
 localStrageの値を配列に変換してkeyArrayに代入する。
-```
+```javascript
     function loadWord(word,endChar){
         var keyArray = [処理]
         var out_key = "";
@@ -94,7 +94,7 @@ localStrageの値を配列に変換してkeyArrayに代入する。
 
 
 ## データクリア
-```
+```javascript
     document.getElementById('reset')
     .addEventListener('click',function (){
         localStorage.clear();
